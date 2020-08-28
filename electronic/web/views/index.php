@@ -12,8 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-	SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="keywords" content="Electronic Store" />
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -58,8 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- header modal -->
 	<?php
 	session_start();
-	if($_SESSION['email']=='')
-	{?>
+	if (isset($_SESSION['email'])) { ?>
 		<!--*********************************************************************************************************************************************************-->
 
 		<div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88" aria-hidden="true">
@@ -141,24 +139,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</script>
 		<!-- header modal -->
 		<!--****************************************************************************************************************************************-->
-<?php
+	<?php
 	}
 	?>
 
 	<!-- header -->
 	<div class="header" id="home1">
 		<?php
-		if(!($_SESSION['email']==''))
-		{
-		 ?>
-		<a href="LogOut.php" style="
+		if (!(isset($_SESSION['FirstName']))) {
+		?>
+			<a href="LogOut.php" style="
     margin-left: 250px;
     margin-top: 20px;
     position: absolute;">Log Out</a>
-	<?php } ?>
+		<?php } ?>
 		<div class="container">
 			<div class="w3l_login">
-						<a href="account.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+				<a href="account.php"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 			</div>
 			<div class="w3l_logo">
 				<h1><a href="index.php">Electronic Store<span>Your stores. Your place.</span></a></h1>
@@ -292,8 +289,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							mainClass: 'my-mfp-zoom-in'
 						});
 
-						});
-					</script>
+					});
+				</script>
 			</div>
 			<div class="col-md-7 wthree_banner_bottom_right">
 				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
@@ -1288,7 +1285,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<script src="../js/jquery.wmuSlider.js"></script>
 					<script>
 						$('.example1').wmuSlider();
-						</script>
+					</script>
 				</div>
 				<div class="col-md-5 w3agile_special_deals_grid_right">
 					<img src="../images/20.jpg" alt=" " class="img-responsive" />
